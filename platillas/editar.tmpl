@@ -1,0 +1,49 @@
+{{ define "editar" }}
+{{ template "cabezera" }}
+
+ <div class="card">
+
+		<div class="card-header">
+			Productos
+		</div>
+
+		<div class="card-body">
+
+			<form method="POST" action="/actualizar">
+
+				<div class="form-group">
+					<label>SKU: </label>
+					<input type="text" class="form-control" value={{.Id}} name="sku" id="sku" readonly="readonly">
+				</div>
+				<div class="form-group">
+					<label>Name: </label>
+					<input type="text" class="form-control" value={{.Nombre}}  name="name" id="name">
+				</div>
+				<div class="form-group">
+					<label>Brand: </label>
+					<input type="text" class="form-control" value={{.Marca}} name="brand" id="brand">
+				</div>
+				<div class="form-group">
+					<label>Size: </label>
+					<input type="text" class="form-control" value={{.Tamanio}} name="size" id="size">
+				</div>
+				<div class="form-group">
+					<label>Price: </label>
+					<input type="text" class="form-control" value={{.Precio}} name="price" id="price">
+				</div>
+				<div class="form-group">
+					<label>Imagen: </label>
+					<input type="text" class="form-control" value={{.Imagen}} name="img" id="img">
+				</div>
+
+				<button type="submit" class="btn btn-primary">Save Mod</button>
+                <a class="btn btn-success" name="" id="" href="/" role="button">Return</a>
+
+			</form>
+
+		</div>
+
+	</div>
+
+{{ template "pie" }}
+{{end}}
